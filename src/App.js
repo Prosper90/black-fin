@@ -278,7 +278,7 @@ function App() {
   }, [notify, dataPaidBalance, isConnected]);
 
   return (
-    <div className="w-100 h-[100dvh] bg-[#000] text-white px-5 relative">
+    <div className="w-100 sm:h-[100dvh] h-[100dvh] md:h-screen bg-[#000] text-white px-5 relative">
       <Head />
       <Body
         deposit={deposit}

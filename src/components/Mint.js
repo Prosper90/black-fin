@@ -10,9 +10,10 @@ export default function Mint({
   loadingApprove,
 }) {
   return (
-    <div className="w-100 flex overflow-x-auto md:overflow-hidden items-baseline justify-start md:justify-center gap-2 mt-10">
-      <div className="flex flex-col items-center justify-center h-100">
-        <div className="w-[100%] flex justify-center items-center">
+    <div className=" flex overflow-x-auto md:overflow-hidden items-baseline justify-start md:justify-center gap-2 mt-10">
+      <div className="md:grid md:grid-cols-2">
+        <div className="flex flex-col items-center justify-center h-100">
+        <div className="flex justify-center items-center">
           <img
             src="/silvernft.jpg"
             className="w-[100%] md:w-[70%] h-auto"
@@ -26,7 +27,7 @@ export default function Mint({
             (loadingMintSilver || loadingApprove) && mintType === "silver"
               ? "p-[29px]"
               : "p-4"
-          } rounded text-[#000] font-semibold w-[100%] md:w-[50%] flex justify-center items-center mt-3`}
+          } rounded text-[#000] font-semibold w-[100%] md:w-[70%] flex justify-center items-center mt-3`}
         >
           {(loadingMintSilver || loadingApprove) && mintType === "silver" ? (
             <LoaderSvg />
@@ -36,6 +37,7 @@ export default function Mint({
             </>
           )}
         </button>
+        </div>
         {/* Benefits part */}
         <div className="">
           <h1 className="text-md font-bold">Benefit</h1>
@@ -46,8 +48,9 @@ export default function Mint({
         </div>
       </div>
 
-      <div className="flex flex-col items-center justify-center h-100">
-        <div className="w-[100%] flex justify-center items-center">
+      <div className="md:grid md:grid-cols-2 ">
+       <div className="flex flex-col items-center justify-center h-100">
+        <div className="flex justify-center items-center">
           <img
             src="/goldnft.jpg"
             className="w-[100%] md:w-[70%] h-auto"
@@ -61,7 +64,7 @@ export default function Mint({
             (loadingMintGold || loadingApprove) && mintType === "gold"
               ? "p-[29px]"
               : "p-4"
-          } rounded text-[#000] font-semibold w-[100%] md:w-[50%] flex justify-center items-center mt-3`}
+          } rounded text-[#000] font-semibold w-[100%] md:w-[70%] flex justify-center items-center mt-3`}
         >
           {(loadingMintGold || loadingApprove) && mintType === "gold" ? (
             <LoaderSvg />
@@ -71,6 +74,7 @@ export default function Mint({
             </>
           )}
         </button>
+       </div>
         {/* Benefits part */}
         <div className="">
           <h1 className="text-md font-bold">Benefit</h1>
