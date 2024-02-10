@@ -3,7 +3,7 @@ import React from "react";
 function Footer() {
   return (
     <footer className="sticky top-[100vh] footer mb-0 w-full bottom-0 gap-5 flex flex-col md:flex-row justify-between md:items-center p-4 bg-[#000] border border-[#fff] border-b-0 text-[#808792]">
-      <div className=" flex gap-2 items-center">
+      <div className=" md:flex gap-2 items-center">
         {/* <img
           alt="Casino logo"
           src="/footer-logo.png"
@@ -14,8 +14,8 @@ function Footer() {
           loading="lazy"
           style={{ color: "transparent" }}
         /> */}
-        <h1>Black Fin</h1>
-        <p>Copyright Blackfin © 2024 - All rights reserved</p>
+        <h1 className="text-center">Black Fin</h1>
+        <p className="text-center">Copyright Blackfin © 2024 - All rights reserved</p>
       </div>
       <div className="flex gap-4 mr-0 md:place-self-center justify-end">
         <a href="#">
