@@ -10,8 +10,8 @@ export default function Mint({
   loadingApprove,
 }) {
   return (
-    <div className=" flex overflow-x-auto md:overflow-hidden items-baseline justify-start md:justify-center gap-2 mt-10">
-      <div className="md:grid md:grid-cols-2">
+    <div className=" flex  md:overflow-hidden items-baseline justify-start md:justify-center gap-2 mt-10">
+      <div className="flex flex-col items-center justify-start">
         <div className="flex flex-col items-center justify-center h-100">
         <div className="flex justify-center items-center">
           <img
@@ -39,8 +39,8 @@ export default function Mint({
         </button>
         </div>
         {/* Benefits part */}
-        <div className="">
-          <h1 className="text-md font-bold">Benefit</h1>
+        <div className="w-[100%] md:w-[70%] mt-2">
+          <h1 className="text-md font-bold text-[25px]">BENEFITS</h1>
           <div className="flex flex-col">
             <div className="">-Access to early pool</div>
             <div className="">-Allocation in all IDO</div>
@@ -48,7 +48,7 @@ export default function Mint({
         </div>
       </div>
 
-      <div className="md:grid md:grid-cols-2 ">
+      <div className="flex flex-col items-center justify-start">
        <div className="flex flex-col items-center justify-center h-100">
         <div className="flex justify-center items-center">
           <img
@@ -76,13 +76,13 @@ export default function Mint({
         </button>
        </div>
         {/* Benefits part */}
-        <div className="">
-          <h1 className="text-md font-bold">Benefit</h1>
+        <div className="w-[100%] md:w-[70%] mt-2">
+          <h1 className="text-md font-bold text-[25px]">BENEFITS</h1>
           <div className="flex flex-col">
             <div className="">-Access to early pool</div>
             <div className="">-Allocation in all IDO</div>
-            <div className="">-Recieve Revenue Share</div>
-            <div className="">-Recieve Airdrops</div>
+            <div className="">-Receive Revenue Share</div>
+            <div className="">-Receive Airdrops</div>
             <div className="">-Participate in governance</div>
           </div>
         </div>

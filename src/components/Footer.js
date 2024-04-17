@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <footer className="sticky top-[100vh] footer mb-0 w-full bottom-0 gap-5 flex flex-col md:flex-row justify-between md:items-center p-4 bg-[#000] border border-[#fff] border-b-0 text-[#808792]">
+    <footer className="sticky top-[100vh] footer mt-3 mb-0 w-full bottom-0 gap-5 flex flex-col md:flex-row justify-between md:items-center p-4 bg-[#000] border border-[#fff] border-b-0 text-[#808792]">
       <div className=" md:flex gap-2 items-center">
         {/* <img
           alt="Casino logo"

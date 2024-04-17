@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Mint from "./Mint";
 import Deposit from "./Deposit";
+import Burn from "./Burn";
 
 export default function Body({
   deposit,
@@ -11,6 +12,18 @@ export default function Body({
   loadingMintGold,
   loadingMintSilver,
   loadingApprove,
+  depoalloc,
+  calculating,
+  amount,
+  goldBalance,
+  silverBalance,
+  probableAlloc,
+  loadingApproveU,
+  loading,
+  setLoading,
+  setNotify,
+  setNotifyType,
+  setNotifymsg
 }) {
   const [selected, SetSelected] = useState("mint");
 
@@ -27,9 +40,18 @@ export default function Body({
         </span>
         |
         <span
+          onClick={() => SetSelected("burn")}
+          className={`cursor-pointer text-xs md:text-sm font-semibold ${
+            selected === "burn" ? "text-[#fff]" : "text-[#333]"
+          }`}
+        >
+          Burn
+        </span>
+        |
+        <span
           onClick={() => SetSelected("deposit")}
           className={`cursor-pointer text-xs md:text-sm font-semibold ${
-            selected !== "mint" ? "text-[#fff]" : "text-[#333]"
+            selected === "deposit" ? "text-[#fff]" : "text-[#333]"
           }`}
         >
           Deposit
@@ -45,9 +67,37 @@ export default function Body({
           loadingMintSilver={loadingMintSilver}
           loadingApprove={loadingApprove}
         />
-      ) : (
-        <Deposit deposit={deposit} loadingDeposit={loadingDeposit} />
-      )}
+      ) : selected  === "deposit" ? (
+        <Deposit 
+          deposit={deposit} 
+          loadingDeposit={loadingDeposit}
+          loading={loading}
+          depoalloc={depoalloc} 
+          calculating={calculating} 
+          amount={amount}
+          goldBalance={goldBalance}
+          silverBalance={silverBalance}
+          probableAlloc={probableAlloc}
+          loadingApproveU={loadingApproveU}
+          />
+      ):(
+          <Burn 
+          deposit={deposit} 
+          loadingDeposit={loadingDeposit}
+          loading={loading}
+          setLoading={setLoading}
+          depoalloc={depoalloc} 
+          calculating={calculating} 
+          amount={amount}
+          goldBalance={goldBalance}
+          silverBalance={silverBalance}
+          probableAlloc={probableAlloc}
+          loadingApproveU={loadingApproveU}
+          setNotify={setNotify}
+          setNotifyType={setNotifyType}
+          setNotifymsg={setNotifymsg}
+          />)
+      }
     </div>
   );
 }
